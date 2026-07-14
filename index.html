@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>ApexWealth | Private Wealth Management</title>
-  <!-- High-value niche: Private Wealth Management & Alternative Investments -->
-  <meta name="description" content="ApexWealth provides discreet, high-net-worth portfolio strategy, alternative assets, and family office services for ultra-affluent clients.">
-  <meta name="theme-color" content="#0a1f2e">
+  <title>The Rise of Alternative Assets: How Private Credit Is Reshaping Modern Portfolios | Wealth Insights</title>
+  <meta name="description" content="An in-depth analysis of how private credit and alternative assets are transforming investment strategies for sophisticated investors seeking yield beyond traditional markets.">
+  <meta name="theme-color" content="#ffffff">
   <style>
     * {
       margin: 0;
@@ -15,269 +14,239 @@
     }
 
     body {
-      background: #f8f9fa;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      color: #1e293b;
-      line-height: 1.5;
+      background: #fefefe;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1a1a1a;
+      line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 1280px;
+    .article-container {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 3rem 1.5rem 4rem;
     }
 
-    /* Navigation */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Article Header */
+    .article-header {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e8e8e8;
+      padding-bottom: 2rem;
     }
 
-    .logo {
-      font-size: 1.8rem;
+    .category-tag {
+      display: inline-block;
+      background: #f0f4f8;
+      color: #2c3e50;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.3rem 0.9rem;
+      border-radius: 4px;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #0d1b2a;
       letter-spacing: -0.5px;
-      color: #0a1f2e;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    .logo span {
-      background: #0a1f2e;
-      color: white;
-      font-size: 1rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 30px;
-      letter-spacing: 0.3px;
-    }
-
-    .cta-button {
-      background: #0a1f2e;
-      color: white;
-      padding: 0.7rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.25s, transform 0.1s;
-      box-shadow: 0 4px 12px rgba(10, 31, 46, 0.15);
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-    }
-
-    .cta-button:hover {
-      background: #123449;
-    }
-
-    /* Hero section */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      padding: 4rem 0 5rem;
-    }
-
-    .hero-content h1 {
-      font-size: 3.4rem;
-      font-weight: 600;
-      line-height: 1.2;
-      color: #0a1f2e;
-      letter-spacing: -1px;
+    .article-subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      font-style: italic;
       margin-bottom: 1.5rem;
     }
 
-    .hero-content p {
-      font-size: 1.2rem;
-      color: #475569;
-      margin-bottom: 2.2rem;
-      max-width: 90%;
-    }
-
-    .hero-stats {
+    .article-meta {
       display: flex;
-      gap: 2.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .stat h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0a1f2e;
-    }
-
-    .stat p {
+      align-items: center;
+      gap: 1.2rem;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 0.9rem;
-      color: #64748b;
-      margin: 0;
+      color: #666;
+      flex-wrap: wrap;
     }
 
-    .hero-image {
-      background: #e9eef2;
-      border-radius: 28px;
-      height: 380px;
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      background: #2c3e50;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #dce5ec 0%, #f0f4f8 100%);
-      box-shadow: 0 20px 35px rgba(0,0,0,0.03);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-image::after {
-      content: "⛰️";
-      font-size: 8rem;
-      opacity: 0.2;
-      filter: grayscale(0.3);
-    }
-
-    /* Section titles */
-    .section-title {
-      font-size: 2.2rem;
+      color: white;
       font-weight: 600;
-      color: #0a1f2e;
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.5px;
+      font-size: 0.9rem;
     }
 
-    .section-subtitle {
-      color: #475569;
-      margin-bottom: 3rem;
+    .meta-divider {
+      color: #ccc;
+    }
+
+    /* Article Body */
+    .article-body h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      margin: 2.5rem 0 1rem;
+      line-height: 1.3;
+    }
+
+    .article-body h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 2rem 0 0.8rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.3rem;
       font-size: 1.1rem;
+      color: #2d2d2d;
     }
 
-    /* Services grid */
-    .services-grid {
+    .article-body strong {
+      color: #0d1b2a;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      background: #f9fafb;
+      border-left: 4px solid #2c3e50;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .pull-quote cite {
+      display: block;
+      font-size: 0.85rem;
+      font-style: normal;
+      color: #777;
+      margin-top: 0.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    /* Key stat highlight */
+    .stat-highlight {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin: 3rem 0 5rem;
-    }
-
-    .service-card {
-      background: white;
-      padding: 2rem 1.8rem;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-      transition: all 0.25s;
-      border: 1px solid #f1f5f9;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 30px rgba(10,31,46,0.06);
-      border-color: #d9e2ef;
-    }
-
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
-      color: #0a1f2e;
-    }
-
-    .service-card p {
-      color: #475569;
-      font-size: 0.95rem;
-    }
-
-    /* Insight bar */
-    .insight-bar {
-      background: #0a1f2e;
-      border-radius: 28px;
-      padding: 2.2rem 2.5rem;
-      margin: 3rem 0 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .insight-text h4 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-
-    .insight-text p {
-      opacity: 0.8;
-      font-size: 0.95rem;
-    }
-
-    .market-indicator {
-      display: flex;
-      gap: 2.5rem;
-    }
-
-    .indicator {
+      gap: 1.5rem;
+      margin: 2.5rem 0;
       text-align: center;
     }
 
-    .indicator .value {
-      font-size: 1.8rem;
-      font-weight: 700;
+    .stat-box {
+      background: #f9fafb;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
     }
 
-    .indicator .label {
+    .stat-number {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      display: block;
+    }
+
+    .stat-label {
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 0.8rem;
+      color: #666;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      opacity: 0.7;
+      margin-top: 0.3rem;
+    }
+
+    /* Image placeholder */
+    .article-image-placeholder {
+      background: linear-gradient(135deg, #e8edf2 0%, #f5f7fa 100%);
+      height: 320px;
+      border-radius: 6px;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Related reading */
+    .related-reading {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e8e8e8;
+    }
+
+    .related-reading h4 {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+
+    .related-list {
+      list-style: none;
+    }
+
+    .related-list li {
+      margin-bottom: 0.7rem;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .related-list li::before {
+      content: "→";
+      color: #2c3e50;
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    .related-list li span {
+      color: #2c3e50;
+      cursor: default;
+      font-weight: 500;
     }
 
     /* Footer */
-    .footer {
-      border-top: 1px solid #e2e8f0;
-      padding: 2.5rem 0 2rem;
+    .article-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8e8e8;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: #999;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      color: #475569;
-      font-size: 0.9rem;
       flex-wrap: wrap;
       gap: 1rem;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .footer-links span {
-      color: #475569;
-      cursor: default;
-    }
-
     /* Responsive */
-    @media (max-width: 850px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+    @media (max-width: 600px) {
+      .article-header h1 {
+        font-size: 2rem;
       }
-      .hero-content p {
-        max-width: 100%;
-      }
-      .hero-stats {
-        justify-content: center;
-      }
-      .services-grid {
+      .stat-highlight {
         grid-template-columns: 1fr;
       }
-      .navbar {
-        flex-direction: column;
-        gap: 1.2rem;
+      .article-body p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -286,111 +255,146 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <!-- Navigation - single page, no dead links -->
-    <nav class="navbar">
-      <div class="logo">
-        ApexWealth <span>PRIVATE</span>
+  <article class="article-container">
+    <!-- Header -->
+    <header class="article-header">
+      <span class="category-tag">Alternative Investments</span>
+      <h1>The Rise of Alternative Assets: How Private Credit Is Reshaping Modern Portfolios</h1>
+      <p class="article-subtitle">As traditional fixed income yields compress, sophisticated investors are turning to private credit markets for consistent returns and portfolio diversification.</p>
+      <div class="article-meta">
+        <div class="author-avatar">JM</div>
+        <span>By James Merrick</span>
+        <span class="meta-divider">|</span>
+        <span>July 14, 2026</span>
+        <span class="meta-divider">|</span>
+        <span>12 min read</span>
       </div>
-      <button class="cta-button" onclick="alert('Client portal access requires authentication.')">Client Portal</button>
-    </nav>
+    </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Strategic wealth.<br>Generational vision.</h1>
-        <p>Discreet portfolio architecture for ultra-high-net-worth families, with access to private equity, real assets, and direct investments.</p>
-        <div class="hero-stats">
-          <div class="stat">
-            <h3>$48B+</h3>
-            <p>Assets under advisement</p>
-          </div>
-          <div class="stat">
-            <h3>97%</h3>
-            <p>Client retention rate</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image" aria-label="Abstract wealth representation"></div>
-    </section>
+    <!-- Body -->
+    <div class="article-body">
+      <p>
+        <strong>The investment landscape has undergone a fundamental transformation over the past decade.</strong> Where once a simple mix of stocks and bonds sufficed for most portfolios, today's sophisticated investors are increasingly allocating capital to alternative assets — with private credit emerging as one of the most compelling opportunities in modern finance.
+      </p>
 
-    <!-- Core Services -->
-    <div>
-      <h2 class="section-title">Beyond traditional banking</h2>
-      <p class="section-subtitle">Curated solutions for complex family balance sheets.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏛️</div>
-          <h3>Single Family Office Structuring</h3>
-          <p>Bespoke governance, consolidated reporting, and intergenerational wealth transfer strategies tailored to your legacy.</p>
+      <p>
+        Private credit, broadly defined as non-bank lending to middle-market companies, real estate projects, and specialty finance platforms, has grown from a niche corner of institutional portfolios to a mainstream asset class commanding over <strong>$1.7 trillion</strong> in global assets under management. The drivers behind this growth are structural, not cyclical, suggesting that the asset class is here to stay.
+      </p>
+
+      <!-- Stats -->
+      <div class="stat-highlight">
+        <div class="stat-box">
+          <span class="stat-number" id="stat1">$1.7T</span>
+          <span class="stat-label">Global Private Credit AUM</span>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🌐</div>
-          <h3>Private Market Access</h3>
-          <p>Direct co-investment, pre-IPO allocations, and institutional-grade real assets typically reserved for sovereign funds.</p>
+        <div class="stat-box">
+          <span class="stat-number">9.2%</span>
+          <span class="stat-label">Avg. Annual Return (5Y)</span>
         </div>
-        <div class="service-card">
-          <div class="service-icon">⚖️</div>
-          <h3>Cross-Border Wealth Planning</h3>
-          <p>Multi-jurisdictional tax efficiency, trust services, and citizenship-by-investment coordination for global families.</p>
+        <div class="stat-box">
+          <span class="stat-number">68%</span>
+          <span class="stat-label">Institutional Allocation Growth</span>
         </div>
       </div>
+
+      <h2>Why Private Credit Now?</h2>
+
+      <p>
+        The retreat of traditional banks from middle-market lending — driven by post-2008 regulatory requirements like Basel III and Dodd-Frank — created a void that private credit funds have eagerly filled. These funds, typically structured as <strong>direct lending vehicles, mezzanine funds, or distressed debt strategies</strong>, provide capital to companies that are too large for community banks but too small to access public bond markets efficiently.
+      </p>
+
+      <div class="article-image-placeholder">
+        [Chart: Growth of Private Credit vs. Traditional Bank Lending 2015-2026]
+      </div>
+
+      <p>
+        For investors, the appeal lies in several key characteristics. First, private credit offers <strong>floating-rate exposure</strong>, meaning that as interest rates rise, so do the coupon payments — a stark contrast to traditional fixed-rate bonds that lose value in tightening cycles. Second, the illiquidity premium embedded in these structures typically yields <strong>200-400 basis points above comparable public market debt</strong>, compensating patient capital for reduced liquidity.
+      </p>
+
+      <!-- Pull quote -->
+      <div class="pull-quote">
+        "Private credit is not merely a yield play — it represents a fundamental reallocation of lending activity from regulated banks to asset managers who can structure more flexible, relationship-driven financing solutions."
+        <cite>— Sarah Chen, CIO at Meridian Capital Partners</cite>
+      </div>
+
+      <h2>The Risk-Return Profile</h2>
+
+      <p>
+        No discussion of private credit would be complete without addressing the risks. Default rates in private credit portfolios have historically averaged <strong>2-3% annually</strong>, with recovery rates that vary significantly by loan structure and seniority. Senior secured direct lending — the most conservative segment — has demonstrated loss rates comparable to investment-grade public bonds over full market cycles.
+      </p>
+
+      <h3>Key Considerations for Portfolio Allocation</h3>
+
+      <p>
+        Advisors and family offices considering private credit allocations should evaluate several factors. <strong>Manager selection</strong> is paramount; the dispersion between top-quartile and bottom-quartile private credit managers can exceed 500 basis points annually. Additionally, <strong>vintage diversification</strong> matters — committing capital across multiple fund vintages smooths out the impact of any single year's credit environment.
+      </p>
+
+      <p>
+        The typical allocation range for qualified portfolios falls between <strong>5% and 15%</strong> of total assets, though some institutional investors have pushed beyond 20% in their search for uncorrelated returns. Access has also broadened, with interval funds and business development companies (BDCs) offering registered vehicles that provide individual accredited investors a path into strategies once reserved for pensions and endowments.
+      </p>
+
+      <h2>The Broader Alternative Asset Universe</h2>
+
+      <p>
+        Private credit sits within a larger ecosystem of alternative investments that includes <strong>private equity, real assets, infrastructure, and hedge fund strategies</strong>. What unifies these categories is their potential to deliver returns that are less correlated with public equity and bond markets — a quality that becomes increasingly valuable during periods of market stress.
+      </p>
+
+      <p>
+        According to recent data from Preqin, the global alternatives industry is projected to reach <strong>$23 trillion by 2027</strong>, up from approximately $16 trillion today. This growth reflects both increased allocations from existing institutional investors and the gradual opening of alternative strategies to high-net-worth individual investors through innovative fund structures.
+      </p>
+
+      <div class="pull-quote">
+        "We are witnessing the democratization of alternative assets. Structures like interval funds and tender-offer funds are bringing institutional-quality strategies to qualified individual investors who previously had no access."
+        <cite>— Dr. Marcus Webb, Professor of Finance, Wharton School</cite>
+      </div>
+
+      <h2>Looking Ahead</h2>
+
+      <p>
+        The macroeconomic environment continues to favor private credit strategies. With central banks signaling a "higher for longer" interest rate paradigm, floating-rate assets maintain their structural advantage. Meanwhile, the ongoing retreat of regional banks from commercial lending — accelerated by the banking stresses of 2023-2024 — ensures that demand for private credit capital remains robust.
+      </p>
+
+      <p>
+        For investors willing to accept moderate illiquidity in exchange for enhanced yield and diversification, private credit represents one of the most <strong>compelling risk-adjusted opportunities</strong> available in today's market. As with any investment, due diligence and appropriate sizing within a broader portfolio context remain essential — but the strategic case for inclusion has rarely been stronger.
+      </p>
     </div>
 
-    <!-- Dynamic market insight -->
-    <div class="insight-bar" id="marketInsight">
-      <div class="insight-text">
-        <h4>📊 Apex Market Intelligence</h4>
-        <p>Alternative asset allocation trends · Updated <span id="updateTime">just now</span></p>
-      </div>
-      <div class="market-indicator" id="marketData">
-        <div class="indicator">
-          <div class="value" id="peRatio">23.4</div>
-          <div class="label">Private Equity IRR (est.)</div>
-        </div>
-        <div class="indicator">
-          <div class="value" id="realAssets">+8.2%</div>
-          <div class="label">Real Assets YTD</div>
-        </div>
-        <div class="indicator">
-          <div class="value" id="goldAlloc">12.5%</div>
-          <div class="label">Gold Allocation</div>
-        </div>
-      </div>
+    <!-- Related Reading -->
+    <div class="related-reading">
+      <h4>Continue Reading</h4>
+      <ul class="related-list">
+        <li><span>Understanding Interval Funds: A Gateway to Private Markets</span></li>
+        <li><span>Real Assets in an Inflationary Regime: Infrastructure & Farmland</span></li>
+        <li><span>Family Office Allocations: The 2026 Survey Results</span></li>
+      </ul>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div>© 2025 ApexWealth Group. All rights reserved. SEC-registered investment advisor.</div>
-      <div class="footer-links">
-        <span>Disclosures</span>
-        <span>Form CRS</span>
-        <span>Privacy</span>
-        <span>Contact</span>
-      </div>
+    <footer class="article-footer">
+      <span>© 2026 Wealth Insights. For informational purposes only. Not investment advice.</span>
+      <span>Disclosures • Privacy • Terms</span>
     </footer>
-  </div>
+  </article>
 
+  <!-- Minimal JS for subtle live timestamp update -->
   <script>
     (function() {
-      function updateMarketData() {
-        const peBase = 23.1 + (Math.random() * 1.2 - 0.3);
-        const realAssetsBase = (8.0 + (Math.random() * 1.4 - 0.2)).toFixed(1);
-        const goldBase = (12.2 + (Math.random() * 0.9 - 0.1)).toFixed(1);
-
-        document.getElementById('peRatio').textContent = peBase.toFixed(1);
-        document.getElementById('realAssets').textContent = '+' + realAssetsBase + '%';
-        document.getElementById('goldAlloc').textContent = goldBase + '%';
-
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        document.getElementById('updateTime').textContent = timeString + ' ET';
+      // Update the article's "freshness" subtly
+      const metaSpans = document.querySelectorAll('.article-meta span');
+      // The date is already set; we can gently update read time or just keep static
+      // For a dynamic feel, update the stats slightly to simulate live data
+      function refreshStats() {
+        const stat1 = document.getElementById('stat1');
+        if (stat1) {
+          // Subtle variation around 1.7T
+          const base = 1.7;
+          const variation = (Math.random() * 0.04 - 0.02);
+          stat1.textContent = '$' + (base + variation).toFixed(1) + 'T';
+        }
       }
-
-      updateMarketData();
-      setInterval(updateMarketData, 8000);
-
-      console.log('ApexWealth | Premium wealth intelligence — single page, no advertisements.');
+      // Refresh every 30 seconds to keep it feeling current
+      setInterval(refreshStats, 30000);
+      console.log('Wealth Insights | Premium financial article — no advertisements.');
     })();
   </script>
 </body>
