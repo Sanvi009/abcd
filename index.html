@@ -22,14 +22,13 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Premium subtle grain + smooth background */
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 2rem;
     }
 
-    /* Navigation – clean, authoritative */
+    /* Navigation */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -57,40 +56,25 @@
       letter-spacing: 0.3px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #334155;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-      letter-spacing: 0.2px;
-    }
-
-    .nav-links a:hover {
-      color: #0a1f2e;
-    }
-
     .cta-button {
       background: #0a1f2e;
-      color: white !important;
+      color: white;
       padding: 0.7rem 1.8rem;
       border-radius: 40px;
       font-weight: 500;
+      text-decoration: none;
       transition: background 0.25s, transform 0.1s;
       box-shadow: 0 4px 12px rgba(10, 31, 46, 0.15);
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
     }
 
     .cta-button:hover {
       background: #123449;
     }
 
-    /* Hero section – high-value aesthetic */
+    /* Hero section */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -153,7 +137,7 @@
       filter: grayscale(0.3);
     }
 
-    /* Services grid – demonstrating high niche */
+    /* Section titles */
     .section-title {
       font-size: 2.2rem;
       font-weight: 600;
@@ -168,6 +152,7 @@
       font-size: 1.1rem;
     }
 
+    /* Services grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -206,7 +191,7 @@
       font-size: 0.95rem;
     }
 
-    /* Insights / market snapshot */
+    /* Insight bar */
     .insight-bar {
       background: #0a1f2e;
       border-radius: 28px;
@@ -270,13 +255,9 @@
       gap: 2rem;
     }
 
-    .footer-links a {
-      text-decoration: none;
+    .footer-links span {
       color: #475569;
-    }
-
-    .footer-links a:hover {
-      color: #0a1f2e;
+      cursor: default;
     }
 
     /* Responsive */
@@ -298,32 +279,20 @@
         flex-direction: column;
         gap: 1.2rem;
       }
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-      }
     }
   </style>
-  <!-- Google Font Inter for clean premium look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <!-- Navigation -->
+    <!-- Navigation - single page, no dead links -->
     <nav class="navbar">
       <div class="logo">
         ApexWealth <span>PRIVATE</span>
       </div>
-      <div class="nav-links">
-        <a href="#">Family Office</a>
-        <a href="#">Alternative Assets</a>
-        <a href="#">Philanthropy</a>
-        <a href="#">Insights</a>
-        <a href="#" class="cta-button">Client Portal</a>
-      </div>
+      <button class="cta-button" onclick="alert('Client portal access requires authentication.')">Client Portal</button>
     </nav>
 
     <!-- Hero -->
@@ -345,7 +314,7 @@
       <div class="hero-image" aria-label="Abstract wealth representation"></div>
     </section>
 
-    <!-- Core Services: High-Niche Wealth Management -->
+    <!-- Core Services -->
     <div>
       <h2 class="section-title">Beyond traditional banking</h2>
       <p class="section-subtitle">Curated solutions for complex family balance sheets.</p>
@@ -368,7 +337,7 @@
       </div>
     </div>
 
-    <!-- Dynamic market insight / high-value content snippet (JS enhanced) -->
+    <!-- Dynamic market insight -->
     <div class="insight-bar" id="marketInsight">
       <div class="insight-text">
         <h4>📊 Apex Market Intelligence</h4>
@@ -394,50 +363,34 @@
     <footer class="footer">
       <div>© 2025 ApexWealth Group. All rights reserved. SEC-registered investment advisor.</div>
       <div class="footer-links">
-        <a href="#">Disclosures</a>
-        <a href="#">Form CRS</a>
-        <a href="#">Privacy</a>
-        <a href="#">Contact</a>
+        <span>Disclosures</span>
+        <span>Form CRS</span>
+        <span>Privacy</span>
+        <span>Contact</span>
       </div>
     </footer>
   </div>
 
-  <!-- JavaScript: dynamic data update to simulate live insight (no ads) -->
   <script>
     (function() {
-      // Premium dynamic behavior: update market indicators subtly to show freshness
       function updateMarketData() {
-        // Simulated private wealth indicators (high-niche data points)
-        const peBase = 23.1 + (Math.random() * 1.2 - 0.3); // between ~22.8 and 24.3
-        const realAssetsBase = (8.0 + (Math.random() * 1.4 - 0.2)).toFixed(1); // around 7.8% to 9.2%
-        const goldBase = (12.2 + (Math.random() * 0.9 - 0.1)).toFixed(1); // 12.1% to 13.1%
+        const peBase = 23.1 + (Math.random() * 1.2 - 0.3);
+        const realAssetsBase = (8.0 + (Math.random() * 1.4 - 0.2)).toFixed(1);
+        const goldBase = (12.2 + (Math.random() * 0.9 - 0.1)).toFixed(1);
 
         document.getElementById('peRatio').textContent = peBase.toFixed(1);
         document.getElementById('realAssets').textContent = '+' + realAssetsBase + '%';
         document.getElementById('goldAlloc').textContent = goldBase + '%';
 
-        // Update timestamp
         const now = new Date();
         const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
         document.getElementById('updateTime').textContent = timeString + ' ET';
       }
 
-      // Initial update
       updateMarketData();
-
-      // Refresh every 8 seconds to keep data feeling live without being intrusive
       setInterval(updateMarketData, 8000);
 
-      // Smooth, subtle interaction for service cards (accessibility)
-      const cards = document.querySelectorAll('.service-card');
-      cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-          card.style.transition = 'all 0.2s ease';
-        });
-      });
-
-      // Console message to indicate no ads, purely content
-      console.log('ApexWealth | Premium wealth intelligence — no advertisements, pure content.');
+      console.log('ApexWealth | Premium wealth intelligence — single page, no advertisements.');
     })();
   </script>
 </body>
