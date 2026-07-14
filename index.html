@@ -1,44 +1,444 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>ApexWealth | Private Wealth Management</title>
+  <!-- High-value niche: Private Wealth Management & Alternative Investments -->
+  <meta name="description" content="ApexWealth provides discreet, high-net-worth portfolio strategy, alternative assets, and family office services for ultra-affluent clients.">
+  <meta name="theme-color" content="#0a1f2e">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f9fa;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Premium subtle grain + smooth background */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navigation – clean, authoritative */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #0a1f2e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo span {
+      background: #0a1f2e;
+      color: white;
+      font-size: 1rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links a:hover {
+      color: #0a1f2e;
+    }
+
+    .cta-button {
+      background: #0a1f2e;
+      color: white !important;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 500;
+      transition: background 0.25s, transform 0.1s;
+      box-shadow: 0 4px 12px rgba(10, 31, 46, 0.15);
+    }
+
+    .cta-button:hover {
+      background: #123449;
+    }
+
+    /* Hero section – high-value aesthetic */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 4rem 0 5rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #0a1f2e;
+      letter-spacing: -1px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #475569;
+      margin-bottom: 2.2rem;
+      max-width: 90%;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a1f2e;
+    }
+
+    .stat p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .hero-image {
+      background: #e9eef2;
+      border-radius: 28px;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #dce5ec 0%, #f0f4f8 100%);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::after {
+      content: "⛰️";
+      font-size: 8rem;
+      opacity: 0.2;
+      filter: grayscale(0.3);
+    }
+
+    /* Services grid – demonstrating high niche */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #0a1f2e;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      color: #475569;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0 5rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem 1.8rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      transition: all 0.25s;
+      border: 1px solid #f1f5f9;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 30px rgba(10,31,46,0.06);
+      border-color: #d9e2ef;
+    }
+
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: #0a1f2e;
+    }
+
+    .service-card p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* Insights / market snapshot */
+    .insight-bar {
+      background: #0a1f2e;
+      border-radius: 28px;
+      padding: 2.2rem 2.5rem;
+      margin: 3rem 0 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .insight-text h4 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .insight-text p {
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+
+    .market-indicator {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .indicator {
+      text-align: center;
+    }
+
+    .indicator .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .indicator .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 2.5rem 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #475569;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #475569;
+    }
+
+    .footer-links a:hover {
+      color: #0a1f2e;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-content p {
+        max-width: 100%;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+  <!-- Google Font Inter for clean premium look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
-    
 <body>
-    <h1>Welcome to the User Site</h1>
-    <p>Move your mouse, scroll, click – watch the magic happen.</p>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        ApexWealth <span>PRIVATE</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Family Office</a>
+        <a href="#">Alternative Assets</a>
+        <a href="#">Philanthropy</a>
+        <a href="#">Insights</a>
+        <a href="#" class="cta-button">Client Portal</a>
+      </div>
+    </nav>
 
-    <script>
-        // Connect to your Python backend (we'll run this locally first)
-        const socket = new WebSocket('ws://localhost:8080');
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Strategic wealth.<br>Generational vision.</h1>
+        <p>Discreet portfolio architecture for ultra-high-net-worth families, with access to private equity, real assets, and direct investments.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>$48B+</h3>
+            <p>Assets under advisement</p>
+          </div>
+          <div class="stat">
+            <h3>97%</h3>
+            <p>Client retention rate</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image" aria-label="Abstract wealth representation"></div>
+    </section>
 
-        // Send mouse movements
-        document.addEventListener('mousemove', (e) => {
-            socket.send(JSON.stringify({
-                type: 'mousemove',
-                x: e.clientX,
-                y: e.clientY
-            }));
+    <!-- Core Services: High-Niche Wealth Management -->
+    <div>
+      <h2 class="section-title">Beyond traditional banking</h2>
+      <p class="section-subtitle">Curated solutions for complex family balance sheets.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏛️</div>
+          <h3>Single Family Office Structuring</h3>
+          <p>Bespoke governance, consolidated reporting, and intergenerational wealth transfer strategies tailored to your legacy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌐</div>
+          <h3>Private Market Access</h3>
+          <p>Direct co-investment, pre-IPO allocations, and institutional-grade real assets typically reserved for sovereign funds.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3>Cross-Border Wealth Planning</h3>
+          <p>Multi-jurisdictional tax efficiency, trust services, and citizenship-by-investment coordination for global families.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic market insight / high-value content snippet (JS enhanced) -->
+    <div class="insight-bar" id="marketInsight">
+      <div class="insight-text">
+        <h4>📊 Apex Market Intelligence</h4>
+        <p>Alternative asset allocation trends · Updated <span id="updateTime">just now</span></p>
+      </div>
+      <div class="market-indicator" id="marketData">
+        <div class="indicator">
+          <div class="value" id="peRatio">23.4</div>
+          <div class="label">Private Equity IRR (est.)</div>
+        </div>
+        <div class="indicator">
+          <div class="value" id="realAssets">+8.2%</div>
+          <div class="label">Real Assets YTD</div>
+        </div>
+        <div class="indicator">
+          <div class="value" id="goldAlloc">12.5%</div>
+          <div class="label">Gold Allocation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>© 2025 ApexWealth Group. All rights reserved. SEC-registered investment advisor.</div>
+      <div class="footer-links">
+        <a href="#">Disclosures</a>
+        <a href="#">Form CRS</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript: dynamic data update to simulate live insight (no ads) -->
+  <script>
+    (function() {
+      // Premium dynamic behavior: update market indicators subtly to show freshness
+      function updateMarketData() {
+        // Simulated private wealth indicators (high-niche data points)
+        const peBase = 23.1 + (Math.random() * 1.2 - 0.3); // between ~22.8 and 24.3
+        const realAssetsBase = (8.0 + (Math.random() * 1.4 - 0.2)).toFixed(1); // around 7.8% to 9.2%
+        const goldBase = (12.2 + (Math.random() * 0.9 - 0.1)).toFixed(1); // 12.1% to 13.1%
+
+        document.getElementById('peRatio').textContent = peBase.toFixed(1);
+        document.getElementById('realAssets').textContent = '+' + realAssetsBase + '%';
+        document.getElementById('goldAlloc').textContent = goldBase + '%';
+
+        // Update timestamp
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        document.getElementById('updateTime').textContent = timeString + ' ET';
+      }
+
+      // Initial update
+      updateMarketData();
+
+      // Refresh every 8 seconds to keep data feeling live without being intrusive
+      setInterval(updateMarketData, 8000);
+
+      // Smooth, subtle interaction for service cards (accessibility)
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transition = 'all 0.2s ease';
         });
+      });
 
-        // Send scroll events
-        document.addEventListener('scroll', () => {
-            socket.send(JSON.stringify({
-                type: 'scroll',
-                y: window.scrollY
-            }));
-        });
-
-        // Send clicks
-        document.addEventListener('click', (e) => {
-            socket.send(JSON.stringify({
-                type: 'click',
-                x: e.clientX,
-                y: e.clientY
-            }));
-        });
-
-        console.log('Connected to backend');
-    </script>
+      // Console message to indicate no ads, purely content
+      console.log('ApexWealth | Premium wealth intelligence — no advertisements, pure content.');
+    })();
+  </script>
 </body>
 </html>
