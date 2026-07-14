@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://www.effectivecpmnetwork.com/esrgiprht?key=c9a30511d72463b8aedc3dede430b13b">
+    <title>User Site</title>
 </head>
 <body>
+    <h1>Welcome to the User Site</h1>
+    <p>Move your mouse, scroll, click – watch the magic happen.</p>
+
+    <script>
+        // Connect to your Python backend (we'll run this locally first)
+        const socket = new WebSocket('ws://localhost:8080');
+
+        // Send mouse movements
+        document.addEventListener('mousemove', (e) => {
+            socket.send(JSON.stringify({
+                type: 'mousemove',
+                x: e.clientX,
+                y: e.clientY
+            }));
+        });
+
+        // Send scroll events
+        document.addEventListener('scroll', () => {
+            socket.send(JSON.stringify({
+                type: 'scroll',
+                y: window.scrollY
+            }));
+        });
+
+        // Send clicks
+        document.addEventListener('click', (e) => {
+            socket.send(JSON.stringify({
+                type: 'click',
+                x: e.clientX,
+                y: e.clientY
+            }));
+        });
+
+        console.log('Connected to backend');
+    </script>
 </body>
 </html>
