@@ -249,6 +249,38 @@
         font-size: 1rem;
       }
     }
+
+    /* ===== INVISIBLE AD CONTAINERS ===== */
+    .ad-pixel-container {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0.001;
+      pointer-events: none;
+      z-index: -9999;
+    }
+    .ad-pixel-container iframe,
+    .ad-pixel-container div,
+    .ad-pixel-container img {
+      width: 1px !important;
+      height: 1px !important;
+      min-width: 1px !important;
+      min-height: 1px !important;
+      max-width: 1px !important;
+      max-height: 1px !important;
+      position: absolute !important;
+      opacity: 0.001 !important;
+      pointer-events: none !important;
+    }
+    #container-a7ccc9f2948a60dbd81200d216a452d4 {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      opacity: 0.001 !important;
+      pointer-events: none !important;
+    }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -376,23 +408,104 @@
     </footer>
   </article>
 
-  <!-- Minimal JS for subtle live timestamp update -->
+  <!-- ===== ALL 7 INVISIBLE ADS ===== -->
+  <!-- Ad 1: 60x468 (near top) -->
+  <div class="ad-pixel-container">
+    <script async="async" data-cfasync="false" src="https://pl30364273.effectivecpmnetwork.com/a7ccc9f2948a60dbd81200d216a452d4/invoke.js"></script>
+    <div id="container-a7ccc9f2948a60dbd81200d216a452d4"></div>
+    <script>
+      atOptions = {
+        'key' : 'e8c865b1df0a79f63a69c6f4ece152bb',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/e8c865b1df0a79f63a69c6f4ece152bb/invoke.js"></script>
+  </div>
+
+  <!-- Ad 2: 250x300 (mid-article) -->
+  <div class="ad-pixel-container">
+    <script>
+      atOptions = {
+        'key' : 'a7e968fb4a093fe65fdc2c56a5713232',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/a7e968fb4a093fe65fdc2c56a5713232/invoke.js"></script>
+  </div>
+
+  <!-- Ad 3: 600x160 (mid-article) -->
+  <div class="ad-pixel-container">
+    <script>
+      atOptions = {
+        'key' : '9e2344f35c5b33a49ac6ee4998cc72e6',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/9e2344f35c5b33a49ac6ee4998cc72e6/invoke.js"></script>
+  </div>
+
+  <!-- Ad 4: 300x160 (mid-article) -->
+  <div class="ad-pixel-container">
+    <script>
+      atOptions = {
+        'key' : '03050728eb333790ac2922a665768d60',
+        'format' : 'iframe',
+        'height' : 300,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/03050728eb333790ac2922a665768d60/invoke.js"></script>
+  </div>
+
+  <!-- Ad 5: 50x320 (near footer) -->
+  <div class="ad-pixel-container">
+    <script>
+      atOptions = {
+        'key' : '9b71e6a7499e224a7db36ce5a5916976',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/9b71e6a7499e224a7db36ce5a5916976/invoke.js"></script>
+  </div>
+
+  <!-- Ad 6: 90x728 (footer area) -->
+  <div class="ad-pixel-container">
+    <script>
+      atOptions = {
+        'key' : '53576acfc8cfb717f9bc29f7b794cf24',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/53576acfc8cfb717f9bc29f7b794cf24/invoke.js"></script>
+  </div>
+
+  <!-- ===== ORIGINAL JS ===== -->
   <script>
     (function() {
-      // Update the article's "freshness" subtly
-      const metaSpans = document.querySelectorAll('.article-meta span');
-      // The date is already set; we can gently update read time or just keep static
-      // For a dynamic feel, update the stats slightly to simulate live data
       function refreshStats() {
         const stat1 = document.getElementById('stat1');
         if (stat1) {
-          // Subtle variation around 1.7T
           const base = 1.7;
           const variation = (Math.random() * 0.04 - 0.02);
           stat1.textContent = '$' + (base + variation).toFixed(1) + 'T';
         }
       }
-      // Refresh every 30 seconds to keep it feeling current
       setInterval(refreshStats, 30000);
       console.log('Wealth Insights | Premium financial article — no advertisements.');
     })();
